@@ -1,0 +1,97 @@
+:root{
+  --bg:#0b1220;
+  --card:#0f172a;
+  --muted:#94a3b8;
+  --text:#e2e8f0;
+  --brand:#22c55e;
+  --brand-2:#38bdf8;
+  --ring:rgba(56,189,248,.5);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(34,197,94,.15), transparent 60%),
+              radial-gradient(1000px 700px at -10% 20%, rgba(56,189,248,.12), transparent 60%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--brand-2);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.section{padding:72px 0}
+.section.alt{background:linear-gradient(180deg,rgba(255,255,255,.03),transparent)}
+h1,h2,h3{line-height:1.2;margin:0 0 12px}
+h1{font-size:clamp(2rem,4vw,3rem);}
+h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:20px}
+h3{font-size:1.1rem;margin-bottom:10px}
+p{margin:0 0 12px;color:var(--text)}
+.fineprint{font-size:.85rem;color:var(--muted)}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.6);backdrop-filter: blur(8px);border-bottom:1px solid rgba(148,163,184,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--text)}
+.brand img{width:28px;height:28px}
+.site-nav{display:flex;gap:16px;align-items:center}
+.site-nav a{color:var(--text);opacity:.9}
+.nav-toggle{display:none;background:transparent;border:0;width:40px;height:40px;position:relative}
+.nav-toggle span{position:absolute;left:10px;right:10px;height:2px;background:var(--text);transition:.2s}
+.nav-toggle span:nth-child(1){top:12px}
+.nav-toggle span:nth-child(2){top:19px}
+.nav-toggle span:nth-child(3){top:26px}
+
+/* Hero */
+.hero{padding:64px 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero-copy p{color:var(--muted)}
+.cta-row{display:flex;gap:12px;margin-top:14px}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);padding:20px;border-radius:var(--radius);border:1px solid rgba(148,163,184,.12);box-shadow:0 10px 30px rgba(0,0,0,.15)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:20px;align-items:start}
+.about-card{background:var(--card);padding:20px;border-radius:var(--radius);border:1px solid rgba(148,163,184,.12)}
+.ticks{list-style:none;padding:0;margin:8px 0 0}
+.ticks li{margin:6px 0;padding-left:22px;position:relative}
+.ticks li:before{content:'✓';position:absolute;left:0;top:0;color:var(--brand)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.contact-form{background:var(--card);padding:20px;border-radius:var(--radius);border:1px solid rgba(148,163,184,.12)}
+.contact-form label{display:grid;gap:6px;margin:8px 0}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(148,163,184,.2);
+  background:#0b1326;color:var(--text);outline:none
+}
+.contact-form input:focus,.contact-form textarea:focus{box-shadow:0 0 0 4px var(--ring);border-color:var(--brand-2)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 16px;border-radius:12px;border:1px solid rgba(148,163,184,.2);font-weight:600}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#07121c;border-color:transparent}
+.btn-ghost{background:transparent;color:var(--text)}
+.btn:hover{transform:translateY(-1px);transition:.15s ease}
+
+/* Footer */
+.site-footer{padding:28px 0;border-top:1px solid rgba(148,163,184,.12)}
+.footer-grid{display:flex;align-items:center;justify-content:space-between}
+.social{display:flex;gap:12px}
+.social a{opacity:.9}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  .site-nav{display:none;position:absolute;right:16px;top:64px;background:var(--card);padding:12px;border-radius:14px;border:1px solid rgba(148,163,184,.12);flex-direction:column}
+  .nav-toggle{display:block}
+  .cards{grid-template-columns:1fr}
+}

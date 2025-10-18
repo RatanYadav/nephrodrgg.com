@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nephro DR GG • Kidney Health & Care</title>
+  <meta name="description" content="Nephro DR GG — a simple, clean website template you can customize for your practice or project.">
+  <meta property="og:title" content="Nephro DR GG">
+  <meta property="og:description" content="Kidney health, made clear.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nephrodrgg.com/">
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <img src="assets/logo.svg" alt="Nephro DR GG logo">
+        <span>Nephro DR GG</span>
+      </a>
+      <nav id="site-nav" class="site-nav">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn-primary">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Kidney health, made clear.</h1>
+          <p>Welcome to <strong>Nephro DR GG</strong>. This is a clean, fast template you can customize with your own details—ideal for a clinic, personal site, or project.</p>
+          <div class="cta-row">
+            <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+            <a href="#services" class="btn btn-ghost">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="assets/hero.svg" alt="Stylized kidney illustration">
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Consultation</h3>
+            <p>Personalized evaluation and guidance. Replace this text with your specific offering and pricing.</p>
+          </article>
+          <article class="card">
+            <h3>Diagnostics</h3>
+            <p>Coordinated testing and clear explanations. Edit this section to match your capabilities.</p>
+          </article>
+          <article class="card">
+            <h3>Care Plans</h3>
+            <p>Ongoing care and follow‑ups tailored to patient needs. Add your own process and timelines.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div>
+            <p><strong>Nephro DR GG</strong> is a placeholder name you can keep or change. Add your credentials, clinic hours, and location here.</p>
+            <ul class="ticks">
+              <li>Evidence‑based information</li>
+              <li>Clear communication</li>
+              <li>Respect for your time</li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <h3>Hours</h3>
+            <p><strong>Mon–Fri</strong>: 9:00–17:00<br><strong>Sat</strong>: 10:00–14:00<br><strong>Sun</strong>: Closed</p>
+            <h3>Location</h3>
+            <p>123 Kidney Care Road, Your City</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Is this site production‑ready?</summary>
+          <p>Yes. It’s fully static, fast, and easy to deploy on any host. Customize the copy and you’re set.</p>
+        </details>
+        <details>
+          <summary>Can I add online forms?</summary>
+          <p>Absolutely. Swap the contact section’s mailto link with a form service like Formspree or your own backend.</p>
+        </details>
+        <details>
+          <summary>How do I change colors and fonts?</summary>
+          <p>Edit <code>styles.css</code> (CSS variables at the top) to quickly update the look.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <p>For appointments and inquiries, reach out via email or phone.</p>
+            <p><a class="btn btn-primary" href="mailto:info@nephrodrgg.com">Email: info@nephrodrgg.com</a></p>
+            <p><a class="btn btn-ghost" href="tel:+910000000000">Call: +91 00000 00000</a></p>
+            <p class="fineprint">* Replace the email and phone above with your real contact details.</p>
+          </div>
+          <form class="contact-form" onsubmit="return sendQuickMessage(event)">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send</button>
+            <p class="fineprint">This demo opens your email client. Integrate a form service for real submissions.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Nephro DR GG • All rights reserved.</p>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="X / Twitter">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
